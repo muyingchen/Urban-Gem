@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>UrbanGem</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+			body{
+				text-align: center;
+			}
+		</style>
+</head>
+<body>
+
+ <div class="container-fluid">
+ 
+    <div class="app-header">
+      <button type="button" class ="btn btn-default">x</button>
+      <span class="UrbanGem">Photo</span>
+      <button type="button" class="btn btn-default">Share</button>
+    </div>
+
+ <div class="photo"> 
+  <style>
+#container {
+    margin: 0px auto;
+    width: 250px;
+    height: 275px;
+    border: 10px #333 solid;
+}
+#videoElement {
+    width: 250px;
+    height: 275px;
+    background-color: #666;
+}
+</style>
+</head>
+  
+<body>
+<div id="container">
+    <video autoplay="true" id="videoElement">
+     
+    </video>
+</div>
+<script>
+ var video = document.querySelector("#videoElement");
+ 
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+ 
+if (navigator.getUserMedia) {       
+    navigator.getUserMedia({video: true}, handleVideo, videoError);
+}
+ 
+function handleVideo(stream) {
+    video.src = window.URL.createObjectURL(stream);
+}
+ 
+function videoError(e) {
+    // do something
+}
+</script>
+ </div>
+
+ <div class="Footer">
+   <input type="image" id="take-photo" src="camera_2.png" />
+   <input type="image" id="check_in" src="locator.png" />
+   </div>
+
+</body>
+</html>
+
