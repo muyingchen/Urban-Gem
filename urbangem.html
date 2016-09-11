@@ -6,43 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+  </script>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <style type="text/css">
 			body{
 				text-align: center;
 			}
-		</style>
+
+#container {
+   
+    width: 100%;
+    height: auto;
+    border: 10px #333 solid;
+}
+#videoElement {
+    width: 100%;
+    height: auto;
+    background-color: #666;
+}
+</style>
+	
 </head>
 <body>
 
  <div class="container-fluid">
  
     <div class="app-header col-xs-4">
-      <button type="button" class ="btn btn-default">x</button>
+      <button type="button" <i class="glyphicon glyphicon-chevron-left fa-lg"> </i> </button>
     </div>
-    <div class="UrbanGem col-xs-4">Photo</div>
-    <div>
-      <button type="button" class="btn btn-default">Share</button>
-    </div> 
+    <div class="col-xs-4">
+    	Photo
+    </div>
+    <div class ="col-xs-4">
+      <button type="button"> <i class="glyphicon glyphicon-share fa-lg"> </i> </button>
+    </div>
 
- <div class="photo"> 
-  <style>
-	#container {
-	    margin: 0px auto;
-	    width: 100%;
-	    height: auto;
-	    border: 10px #333 solid;
-	}
-	#videoElement {
-	    width: 100%;
-	    height: auto;
-	    background-color: #666;
-	}
- </style>
-
-<div class="photo">
-    <video autoplay="true" id="videoElement">
-     
+<div class="photo"> 
+ <video autoplay="true" id="videoElement">
     </video>
 </div>
 <script>
@@ -64,9 +65,11 @@ function videoError(e) {
 </script>
  </div>
 
- <div class="Footer">
-   <input type="image" id="take-photo" src="camera_2.png" />
-   <input type="image" id="check_in" src="locator.png" />
+ <div class="col-xs-6">
+   <button type="button" <i class="fa fa-camera fa-lg"> </i> </button></div>
+
+   <div class="col-xs-6">
+   <button type="button" <i class="fa fa-map-marker fa-lg"> </i> </button>
    </div>
 
 </body>
